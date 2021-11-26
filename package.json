@@ -1,0 +1,49 @@
+{
+  "name": "@riscvsim/assembler",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "RISC-V RV32G Assembler",
+  "author": "Andrés Castellanos <andres.cv@galileo.edu>",
+  "homepage": "https://github.com/riscvsim/assembler#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riscvsim/assembler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riscvsim/assembler/issues"
+  },
+  "keywords": [
+    "risc-v",
+    "assembler",
+    "rv",
+    "rv32g",
+    "typescript"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "postbuild": "tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "test": "jest --passWithNoTests",
+    "coverage": "jest --coverage --passWithNoTests"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.5.2"
+  }
+}

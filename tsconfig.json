@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "declaration": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "strictFunctionTypes": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2017",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {}
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules"]
+}
