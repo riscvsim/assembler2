@@ -1,3 +1,8 @@
+# ANTLR4 files
+.antlr
+*.interp
+*.tokens
+
 # Logs
 logs
 *.log
