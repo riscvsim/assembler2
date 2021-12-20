@@ -17,10 +17,14 @@
     "experimentalDecorators": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
+    "target": "ES5",
     "outDir": "./dist",
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "@interfaces/*": ["src/interfaces/*"],
+      "@riscv/*": ["src/riscv/*"],
+      "@syntax/*": ["src/syntax/*"]
+    }
   },
   "include": ["src", "test"],
   "exclude": ["node_modules"]

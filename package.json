@@ -22,10 +22,10 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "generate": "java -jar lib/antlr4.jar -Dlanguage=JavaScript -o src/syntax -Xexact-output-dir src/antlr/RV32G.g4",
-    "prebuild": "rimraf dist",
-    "build": "tsc",
-    "postbuild": "tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "generate": "sh .cmd/generate.sh",
+    "prebuild": "rimraf dist && sh .cmd/generate.sh",
+    "build": "tsc -p tsconfig.build.json",
+    "postbuild": "tscpaths -p tsconfig.build.json -s ./src -o ./dist",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "test": "jest --passWithNoTests",
     "coverage": "jest --coverage --passWithNoTests"
