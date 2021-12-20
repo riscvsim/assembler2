@@ -2,6 +2,7 @@
 .antlr
 *.interp
 *.tokens
+syntax
 
 # Logs
 logs
